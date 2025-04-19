@@ -12,8 +12,8 @@ Rails.application.routes.draw do
 
       resources :users, only:[] do
         get "completions", to: "completions#index"
+        get 'progress', to: 'users#progress'
       end
-
 
     end
   end
