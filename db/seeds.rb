@@ -55,3 +55,5 @@ daywise_activities.each do |day_num, activities_list|
 		DailyActivity.create!(day: day, activity: activity_records[activity_key_name])
 	end
 end
+
+User.create!(name: "Lalit", email: "lalitpalariya@gmail.com")
