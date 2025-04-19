@@ -23,7 +23,7 @@ module Api
 
 			def set_user_completions
 				daily_activity_ids = @day.daily_activities.pluck(:id)
-				@completed_ids = Completion.where(user_id: @user_id, daily_activity_id: daily_activity_ids).pluck(:daily_activity_id).to_set
+				@completed_ids = Completion.where(user_id: @user.id, daily_activity_id: daily_activity_ids).pluck(:daily_activity_id).to_set
 			end
 
 			def build_day_activity_response

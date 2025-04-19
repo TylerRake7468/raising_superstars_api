@@ -7,6 +7,14 @@ Rails.application.routes.draw do
       resources :days, only: [:show] do
         get "activities", to: "daily_activities#index"
       end
+
+      resources :completions, only: [:create, :destroy]
+
+      resources :users, only:[] do
+        get "completions", to: "completions#index"
+      end
+
+
     end
   end
 end
